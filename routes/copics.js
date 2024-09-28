@@ -9,7 +9,6 @@ import { body, param, validationResult } from 'express-validator';
 //https://medium.com/free-code-camp/how-to-make-input-validation-simple-and-clean-in-your-express-js-app-ea9b5ff5a8a7
 //https://howtodevez.medium.com/using-express-validator-for-data-validation-in-nodejs-6946afd9d67e
 const router = express.Router();
-const expressValidator = require('express-validator')
 
 // Multer setup
 const storage = multer.diskStorage({
@@ -73,8 +72,7 @@ router.post('/create', upload.single('image'),[
   body('colorName').isAlpha().withMessage('Invalid color name.'),
   body('colorCode').isAlphanumeric().withMessage('Invalid color code.'),  ///validation using express-validator
   body('type').isString().withMessage('Invalid type.'),
-  body('number').isInt().withMessage('Number must be an integer.'),
-  handleValidationErrors], 
+  body('number').isInt().withMessage('Number must be an integer.')], 
   async (req, res) => {
   const { colorName, colorCode, type, number} = req.body;  
   const filename = req.file ? req.file.filename : null;
@@ -110,8 +108,7 @@ router.put('/update/:id', upload.single('image'),[
   body('colorName').optional().isAlpha().withMessage('Invalid color name.'),
   body('colorCode').optional().isAlphanumeric().withMessage('Invalid color code.'),
   body('type').optional().isString().withMessage('Invalid type.'),
-  body('number').optional().isInt().withMessage('Number must be an integer.'),
-  handleValidationErrors
+  body('number').optional().isInt().withMessage('Number must be an integer.')
 ], async(req, res) => {
   const id = req.params.id;
 
