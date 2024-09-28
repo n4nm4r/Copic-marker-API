@@ -1,0 +1,20 @@
+{
+  "name": "copic-marker-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Nancy Martin",
+  "license": "ISC",
+  "description": "Assigment 1, Web app, copic marker collection",
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0",
+    "multer": "^1.4.5-lts.1",
+    "prisma": "^5.20.0"
+  }
+}
