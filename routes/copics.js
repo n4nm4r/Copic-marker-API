@@ -7,6 +7,7 @@ import { body, param, validationResult } from 'express-validator';
 ///Expressvalidator steps from 
 //https://www.digitalocean.com/community/tutorials/how-to-handle-form-inputs-efficiently-with-express-validator-in-express-js
 //https://medium.com/free-code-camp/how-to-make-input-validation-simple-and-clean-in-your-express-js-app-ea9b5ff5a8a7
+//https://howtodevez.medium.com/using-express-validator-for-data-validation-in-nodejs-6946afd9d67e
 const router = express.Router();
 const expressValidator = require('express-validator')
 
