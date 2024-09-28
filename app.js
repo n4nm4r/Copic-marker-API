@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 
 
-app.use('/api/contacts', copicsRouter);
+app.use('/api/copics', copicsRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

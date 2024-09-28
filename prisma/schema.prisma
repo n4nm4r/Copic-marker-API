@@ -16,6 +16,6 @@ model Copic {
   colorCode   String
   type        String
   number      Int
-  fileName    String
+  fileName    String?
   createdAt   DateTime @default(now())
 }
